@@ -1,0 +1,22 @@
+{
+  "name": "square-root-library",
+  "version": "1.0.0",
+  "description": "Calculate Square root of any number",
+  "main": "sqrt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Math",
+    "sqrt"
+  ],
+  "author": "Jay",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "math-sqrt": "^1.0.1"
+  }, 
+  "devDependencies": {
+    "jest":"*"
+  }
+}
