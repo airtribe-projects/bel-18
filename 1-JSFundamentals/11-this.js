@@ -68,7 +68,7 @@ function normal() {
 
 // normal();
 'use strict'
-console.log(this);
+// console.log(this);
 
 // const abc = {
 //     name: "jay",
@@ -94,41 +94,70 @@ Arrow function dowsn't have implicit this, it takes this of its parent
 /* Call Apply bind */
 
 
+// Ex 5:
+// const obj = {
+//     name: "Jay",
+//     greet: function(place) {
+//         console.log(`Hello ${this.name}`);
+//     }, 
+// }
 
+
+// const person = {
+//     name: "niyaz"
+// }
+
+// const person2 = {
+//     name: "Suman"
+// }
+
+
+// const person3 = {
+//     name: "Akshat"
+// }
+
+
+
+// const grt = obj.greet;
+// grt();
+// grt.call(person);
+// grt.call(person2);
+// grt.apply(person);
+// grt.apply(person2);
+
+// const greetings = grt.bind(person3);
+
+// greetings();
+// greetings();
+
+
+// Ex6 
 const obj = {
     name: "Jay",
-    greet: function() {
-        console.log(`Hello ${this.name}`);
+    greet: function(place) {
+        console.log(`Hello ${this.name} to ${place}`);
     }, 
 }
 
-
+const grt = obj.greet;
+// grt("home");
 const person = {
     name: "niyaz"
 }
 
 const person2 = {
-    name: "Suman"
+    name: "Smriti"
 }
 
+// grt.call(person, "home");
+// grt.apply(person, ["home"]);
 
-const person3 = {
-    name: "Akshat"
-}
+const greeting = grt.bind(person);
+
+greeting("home")
+greeting.call(person2, "home");
 
 
-
-const grt = obj.greet;
-grt();
-grt.call(person);
-grt.call(person2);
-grt.apply(person);
-grt.apply(person2);
-
-const greetings = grt.bind(person3);
-
-greetings();
-greetings();
 
 
 
