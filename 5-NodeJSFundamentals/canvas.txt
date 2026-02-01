@@ -1,0 +1,24 @@
+NT3
+----------
+Call Stack 
+Queues: 
+    I: 
+        NT: 
+        PC: 
+    A:    
+
+
+Output:
+MS
+T1
+NT 2
+P1
+NT 1
+T2
+NT 3
+
+EventLoop: 
+1. If there is anything in the Queues
+2. Check if callstack is empty
+3. Schedule the available function on the callstack
+
