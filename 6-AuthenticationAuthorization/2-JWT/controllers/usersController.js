@@ -1,6 +1,8 @@
 const usersModel = require('../models/usersModel');
 const bcrypt = require('bcrypt');
 const SALT_ROUND = 5;
+const jwt = require('jsonwebtoken');
+const JWT_SECRET = process.env.JWT_SECRET;
 
 const registerUser = async (user) => {
     user.password = await bcrypt.hash(user.password, SALT_ROUND);
@@ -27,7 +29,9 @@ const loginUser = async ({email, password}) => {
         throw new Error("Invalid Password");
     }
 
-    return {status: "ok", user: {id: dbUser.id}};
+    const token = jwt.sign({username: dbUser.name, role: dbUser.role}, JWT_SECRET, {expiresIn: '1h'});
+
+    return token;
 };
 
 module.exports = {
