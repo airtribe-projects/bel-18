@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "autocannon": "^8.0.0"
+  },
+  "devDependencies": {
+    "clinic": "^13.0.0"
+  }
+}
