@@ -20,6 +20,12 @@ class OrderProcessingService {
     }
 
     createOrder(orderDetails) { 
+        // 1. Validate Order Details
+        // 2. Figure out appropriate offers --> Builder Pattern
+        // 3. Recompute Order Total
+        // 4. Save the order Packet in DB
+        // 5. DeductPayment
+        // 
         // Logic to create an order
         console.log("Order created:", orderDetails);
     }

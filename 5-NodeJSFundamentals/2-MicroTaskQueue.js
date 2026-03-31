@@ -55,5 +55,10 @@ setTimeout(() => { // T2
     process.nextTick(() => console.log('NT 3'));
 }, 0)
 
+Promise.resolve().then(() => {  // P2
+        console.log("P2");   
+        process.nextTick(() => console.log('NT 4'));
+    })
+
 
 console.log("Main script");
