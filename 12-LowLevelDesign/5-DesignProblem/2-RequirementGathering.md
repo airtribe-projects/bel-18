@@ -38,21 +38,21 @@ Floors could be put under maintainence
 -------------------------------------------------------------------------------------
 Entities:
 -------------------------------------------------------------------------------------
-ParkingLot
 Vehicle
     * Car
     * Bus
     * Truck
     * Bike
-* AllowedVehicles
 ParkingSpot
     * Small
     * Medium
     * Large
     * ExtraLarge
 ParkingFloor
+DisplayPanel
+ParkingLot
 EntryGate
 ExitGate
-Ticket
-Payment
-DisplayPanel
+Ticket (Mediator Pattern)
+ 
+
